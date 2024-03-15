@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Selection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Employee Seeker</h5>
+                        <p class="card-text">If you are looking for employment opportunities, choose this option.</p>
+                        <button type="button" class="btn btn-primary" onclick="redirectToLogin('employee-seeker')">Continue</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Employee Provider</h5>
+                        <p class="card-text">If you are providing employment opportunities, choose this option.</p>
+                        <button type="button" class="btn btn-primary" onclick="redirectToLogin('employee-provider')">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToLogin(role) {
+            if (role === 'employee-seeker') {
+                window.location.href = 'employee-seeker-login.html';
+            } else if (role === 'employee-provider') {
+                window.location.href = 'employee-provider-login.html'; 
+            }
+        }
+    </script>
+</body>
+</html>
